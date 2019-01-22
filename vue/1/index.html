@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+	  {{ message }}
+	</div>
+
+	<div id="app2">
+	  <ol>
+	    <li v-for="disciplina in discipline">
+	      {{ disciplina.denumire }} <strong>{{ disciplina.media }}</strong>
+	    </li>
+
+	  </ol>
+	</div>
+
+
+	<div id="app3">
+		{{salary}} $
+		<button v-on:click="increaseSalary">+</button>
+		<button v-on:click="decreaseSalary">-</button>
+	</div>
+
+	<div id="app4">
+	  <p>{{ message }}</p>
+	  <input v-model="message">
+	</div>
+
+	<div id="app5">
+	  X <input v-model="x" v-on:keyup="calculateSum"> +  Y <input v-model="y" @input="calculateSum"> = {{sum}}
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

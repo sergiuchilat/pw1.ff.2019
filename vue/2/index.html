@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="store">
+		<div>Total price : {{orderSum}}</div>
+
+		<hr>
+		<button>*</button>
+		<div style="float:right">
+			<ul>
+			  	<li v-for="product in products">
+			  		{{product.name}} <u>{{product.quantity}}</u> <button @click="removeFromcart(product)">x</button>
+			  	</li>
+			  </ul>
+		</div>
+		<hr style="clear:both">
+	  <ul>
+	  	<li v-for="product in products">
+	  		{{product.name}} <u>{{product.price}}</u> <button @click="addToCart(product)">+</button>
+	  	</li>
+	  </ul>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
